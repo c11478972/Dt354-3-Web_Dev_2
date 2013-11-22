@@ -31,10 +31,13 @@
 		<h2>You are the first to comment</h2>
 	<%else%>
 		<h2>What other have said:</h2>
-		<%@movie.posts.reverse.each do |post| %>
-			<p><%= post.content%>
-			 Posted <%= time_ago_in_words(post.created_at) %> ago by
-				<%= post.user.name %></p>
+		<div id = "posts">
+			<%@movie.posts.reverse.each do |post| %>
+				<p><%= post.content%>
+				 Posted <%= time_ago_in_words(post.created_at) %> ago by
+					<%= post.user.name %></br>
+					<%= link_to 'Delete?', [@movie, post], method: :delete%></p>
+		</div>
 		<%end%>
 	<%end%>
 
