@@ -42,8 +42,8 @@ Movieapp::Application.configure do
 		:port => 587,
 		:domain => 'www.example.com',
 		:authentication => :plain,
-		:user_name => 'yourgmailaddress',
-		:password => 'yourpassword'
+		:user_name => 'stephenoken@gmail.com',
+		:password => 'Gpjedyqn93'
 		}
   
 end

@@ -20,7 +20,7 @@
   <%= @movie.genre_id %>
 </p>
 <h2>Please Leave a comment :</h2>
-	<%= form_for([@movie, Post.new]) do |f| %>
+	<%= form_for([@movie, Post.new], :remote => true) do |f| %>
 		<%= f.text_area :content, :rows => 3 %>
 			<div class="actions">
 			<%= f.submit "Post a Comment"%>

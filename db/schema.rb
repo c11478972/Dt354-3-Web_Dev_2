@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131106122819) do
+ActiveRecord::Schema.define(:version => 20131115115103) do
 
   create_table "genres", :force => true do |t|
     t.string   "name"
@@ -46,6 +46,9 @@ ActiveRecord::Schema.define(:version => 20131106122819) do
     t.datetime "updated_at",      :null => false
     t.string   "photo"
     t.string   "password_digest"
+    t.string   "address"
+    t.float    "latitude"
+    t.float    "longitude"
   end
 
 end

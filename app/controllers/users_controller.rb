@@ -19,6 +19,8 @@ class UsersController < ApplicationController
       format.html # show.html.erb
       format.json { render json: @user }
     end
+	
+	@user = User.near(@user.address,10,:order => :distance, :units => :km)
   end
 
   # GET /users/new

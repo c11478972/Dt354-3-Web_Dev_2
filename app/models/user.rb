@@ -4,6 +4,9 @@ class User < ActiveRecord::Base
 	validates :email, :name, :photo,  presence: true
 	validates :email, uniqueness: true
 	validates :email, format: {with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/}
+	
+	geocoded_by :address
+	after_validation :geocode, :if => :address_changed?
 
 	def username
 		username = self.name + " " + self.email
