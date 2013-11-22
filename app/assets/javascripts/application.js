@@ -21,4 +21,7 @@ $(function(){
 		changeYear:true,
 		yearRanfe: "-5:+20",
 	});
+	$("input").focus(function(){
+		$(this).css("background-color","LightGray");
+	});
 });
